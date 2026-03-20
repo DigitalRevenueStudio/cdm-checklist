@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CDM Site Compliance — OCS-009</title>
+<title>CDM Site Compliance Checklist</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
 :root {
@@ -268,7 +268,7 @@ body::before {
   <div class="app-header">
     <div class="header-top">
       <div>
-        <div class="doc-ref">FO-NET-OCS-009 · CDM 2015</div>
+        <div class="doc-ref">CDM 2015</div>
         <div class="app-title">Site Compliance<br /><span>Check</span>list</div>
         <div class="header-badges">
           <span class="badge badge-blue">Pre-start</span>
@@ -303,7 +303,7 @@ body::before {
           <option>Construction Phase — Close-out</option>
         </select>
       </div>
-      <div class="field"><label>SSEN Client Rep / PM</label><input type="text" id="f-pm" placeholder="Name" /></div>
+      <div class="field"><label>Client Rep / PM</label><input type="text" id="f-pm" placeholder="Name" /></div>
       <div class="field"><label>Report month</label><input type="month" id="f-month" /><div class="date-hint">&#128197; Tap to select month</div></div>
     </div>
   </div>
@@ -429,7 +429,7 @@ const PRESTART = [
   },
   {
     section: 'Meetings & Visits', items: [
-      { id:'pre17', text:'SSEN Construction Phase Site Visit Meetings developed: Who / Dates in CPP', timing:'Pre-start / Mobilisation' },
+      { id:'pre17', text:'Client Construction Phase Site Visit Meetings developed: Who / Dates in CPP', timing:'Pre-start / Mobilisation' },
       { id:'pre18', text:'Project Progress Meetings scheduled and in diaries', timing:'Pre-start / Mobilisation' },
       { id:'pre19', text:'Site Mobilisation Visit / Check completed', timing:'Pre-start / Mobilisation' },
       { id:'pre20', text:'Pre-Start Meeting completed', timing:'Pre-start / Mobilisation' },
@@ -479,7 +479,7 @@ const CONSTRUCTION = [
       { id:'con29', text:'Relevant parts of CPP provided to sub-contractors', timing:'To Check' },
       { id:'con30', text:'Emergency Arrangements understood by workers', timing:'To Check' },
       { id:'con31', text:'Incident reporting and investigation effective', timing:'To Check' },
-      { id:'con32', text:'SSEN Construction Phase Site Visits completed', timing:'To Check' },
+      { id:'con32', text:'Client Construction Phase Site Visits completed', timing:'To Check' },
       { id:'con33', text:'Assessment of work on / adjacent to live conductors completed', timing:'To Check' },
       { id:'con34', text:'Management of Change / Variations reviewed / agreed', timing:'To Check' },
       { id:'con35', text:'Management of Temporary Works effective', timing:'To Check' },
@@ -866,7 +866,7 @@ function exportReport() {
   }
 
   const html = `<!DOCTYPE html><html><head><meta charset="UTF-8" />
-<title>CDM OCS-009 — ${title}</title>
+<title>CDM Compliance Report — ${title}</title>
 <style>
   body { font-family: Arial, sans-serif; font-size: 11px; color: #111; margin: 0; padding: 24px; }
   h1 { font-size: 16px; font-weight: bold; margin: 0 0 2px; }
@@ -898,14 +898,14 @@ function exportReport() {
 
 <div class="doc-header">
   <div class="doc-title-row">
-    <div class="doc-ref">FO-NET-OCS-009 · CDM 2015 Compliance · Internal</div>
+    <div class="doc-ref">CDM 2015 Compliance · Internal</div>
     <h1>CDM Construction Site Compliance Checklist</h1>
-    <div style="font-size:10px;opacity:0.8;margin-top:2px">This document should be used in conjunction with PR-NET-OCS-001</div>
+    <div style="font-size:10px;opacity:0.8;margin-top:2px">This document should be used in conjunction with your CDM procedure document</div>
   </div>
   <table class="fields-table">
     <tr><td class="lbl">Project Title</td><td>${title}</td><td class="lbl">Project No.</td><td>${num}</td></tr>
     <tr><td class="lbl">Principal Designer</td><td>${pd}</td><td class="lbl">Principal Contractor</td><td>${pc}</td></tr>
-    <tr><td class="lbl">SSEN Client Rep / PM</td><td>${pm}</td><td class="lbl">Report Month</td><td>${month}</td></tr>
+    <tr><td class="lbl">Client Rep / PM</td><td>${pm}</td><td class="lbl">Report Month</td><td>${month}</td></tr>
     <tr><td class="lbl">Check Date</td><td>${date}</td><td class="lbl">Check Type</td><td>${type}</td></tr>
   </table>
 </div>
